@@ -2,7 +2,6 @@ package user
 
 import (
 	"fmt"
-	"strconv"
 )
 
 type User struct {
@@ -13,7 +12,7 @@ type TestUsers struct {
 }
 
 func (this TestUsers) FormatPrint() {
-	for i, v := range this.Users {
-		fmt.Println("tokens[" + strconv.Itoa(i) + "]=" + v.AccessToken)
+	for _, v := range this.Users {
+		fmt.Println(v.AccessToken)
 	}
 }
